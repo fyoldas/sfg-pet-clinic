@@ -2,6 +2,9 @@ package guru.springframework.sfgpetclinic.services;
 
 import java.util.Set;
 
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
 /**
  * Created by jt on 7/21/18.
  */
