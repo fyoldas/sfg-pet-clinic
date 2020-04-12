@@ -89,4 +89,10 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
         //todo - impl
         return null;
     }
+
+	@Override
+	public Set<Owner> findByIdOrLastNameOrderByIdDesc(Long id, String lastName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

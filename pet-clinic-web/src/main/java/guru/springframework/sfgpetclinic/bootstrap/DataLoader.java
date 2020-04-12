@@ -6,6 +6,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by jt on 7/25/18.
@@ -45,6 +47,12 @@ public class DataLoader implements CommandLineRunner {
     private void loadData() {
     	
     	
+    	 Set<Owner> crudRecipes = new HashSet<Owner>();
+		 //recipeRepository.findAll(PageRequest.of(0, 3)).forEach(crudRecipes :: add);
+		 //crudRecipes=  recipeRepository.findByOrderByIdDesc();
+		 crudRecipes = ownerService.findByIdOrLastNameOrderByIdDesc(21L, "Glenanne");
+		 
+		 
     	
         PetType dog = new PetType();
         dog.setName("Dog");
